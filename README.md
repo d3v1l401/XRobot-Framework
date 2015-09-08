@@ -18,8 +18,11 @@ control and work, but the other group members actually are helping me and buildi
 
 * not in order of priority *
 
+
 - Vlado Ročin
+
 - Ovidiu Chelaru
+
 - Kalina Konstantinova
 
 ## Using The Framework

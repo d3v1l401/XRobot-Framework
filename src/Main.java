@@ -3,6 +3,8 @@ import Motors.Motor;
 import LCD.LCDHandler;
 import Waiter.Waiter;
 
+
+
 @SuppressWarnings("unused")
 public class Main
 {
@@ -29,7 +31,8 @@ public class Main
       // We don't want to pause the main thread, because if so, the entire software
       // even the Motors threads would stop (if Main Thread dies, every slave dies).
       // So we just let him wait by counting the time elapsed.
-      Waiter.Counter((byte)2);
+      Waiter.Counter((byte)5);
+      
       
       
    }
