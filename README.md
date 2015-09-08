@@ -16,7 +16,7 @@ a look at it.
 The Framework has been started by me (Luca Massiliano "d3vil401" Francioni) and actually under my
 control and work, but the other group members actually are helping me and building the robot:
 
-* not in order of priority *
+*Not in order of priority*
 
 
 - Vlado Ročin
