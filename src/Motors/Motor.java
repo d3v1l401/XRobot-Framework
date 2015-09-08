@@ -11,9 +11,12 @@ public class Motor extends Thread implements Runnable
    public final static byte MOTOR_SLOT_B         = 2;
    public final static byte MOTOR_SLOT_C         = 3;
    
-   private byte m_Motor     = 0;
+   protected byte m_Motor   = 0;
    private byte m_Speed     = 100;
    private byte m_Direction = DIRECTION_FORWARD;
+   private int  m_Ticks     = 0;
+   
+   protected byte p_WheelDiameter = 4;
    
    public Motor(byte MotorSlot)
    {
@@ -48,12 +51,15 @@ public class Motor extends Thread implements Runnable
       }
    }
    
-   /*
-    *  x * 100
-    *  _______ = amount of ticks needed to make x meters
-    *   6*3,14
-    * 
-    */
+   public byte GetRequiredTicks(byte MetersAmount)
+   {
+      return (byte)((MetersAmount * 100) / (this.p_WheelDiameter * Math.PI));
+   }
+   
+   public byte GetDoneMeters()
+   {
+      return -1; // TODO
+   }
    
    public int GetRotationTicks()
    {
@@ -94,5 +100,39 @@ public class Motor extends Thread implements Runnable
             break;
       }
       this.m_Direction = DIRECTION_STOP;
+   }
+   
+   public class Movements
+   {
+      public static final byte TURN_DIRECTION_LEFT    = 1;
+      public static final byte TURN_DIRECTION_RIGHT   = 2;
+      public static final byte TURN_DIRECTION_FORWARD = 3;
+            
+      public void Turn(byte Direction)
+      {
+         switch (Direction)
+         {
+            case TURN_DIRECTION_LEFT:
+               Stop();
+               SetDirection(DIRECTION_FORWARD);
+               run();
+               
+               break;
+            case TURN_DIRECTION_RIGHT:
+               Stop();
+               SetDirection(DIRECTION_FORWARD);
+               run();
+               
+               break;
+            case TURN_DIRECTION_FORWARD:
+               SetDirection(DIRECTION_FORWARD);
+               run();
+               
+               break;
+            default:
+               // We don't give a duck.
+               break;
+         }
+      }
    }
 }

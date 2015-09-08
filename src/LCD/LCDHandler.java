@@ -21,7 +21,7 @@ public class LCDHandler
    {
       for (int i = 0; i <= this.m_ScreenSize; i++)
       {
-         for (int k = 0; k <= (this.m_ScreenSize + 80); k++)
+         for (int k = 0; k <= (this.m_ScreenSize + 100); k++)
          {
             LCD.setPixel(i, k, 1);
          }
