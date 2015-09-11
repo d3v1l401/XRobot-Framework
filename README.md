@@ -13,17 +13,15 @@ a look at it.
 
 ## Co-Workers
 
-The Framework has been started by me (Luca Massiliano "d3vil401" Francioni) and actually under my
+The Framework has been started by me (Luca Massimiliano "d3vil401" Francioni) and actually under my
 control and work, but the other group members actually are helping me and building the robot:
 
 *Not in order of priority*
 
 
 - Vlado Ročin
-
 - Ovidiu Chelaru
-
-- Kalina Konstantinova
+- Konstantin Konstantinov
 
 ## Using The Framework
 
