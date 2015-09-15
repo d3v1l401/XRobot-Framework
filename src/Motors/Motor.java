@@ -51,6 +51,11 @@ public class Motor extends Thread implements Runnable
       }
    }
    
+   public void Resume()
+   {
+      this.m_Direction = DIRECTION_FORWARD;
+   }
+   
    public byte GetRequiredTicks(byte MetersAmount)
    {
       return (byte)((MetersAmount * 100) / (this.p_WheelDiameter * Math.PI));

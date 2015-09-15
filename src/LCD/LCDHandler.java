@@ -33,6 +33,11 @@ public class LCDHandler
       LCD.drawString(Message, 1, 1);
    }
    
+   public void AWrite(String Message)
+   {
+      System.out.println(Message);
+   }
+   
    public void Clean()
    {
       LCD.clear();
